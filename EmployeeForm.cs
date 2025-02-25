@@ -22,7 +22,7 @@ namespace EmployeeDetails
         private async void buttonAdd_Click(object sender, EventArgs e)
         {
             var detailsForm = new MainForm();
-            var employee = new Employee { Name = "abd" };
+            var employee = new Employee { name = "abd" };
             if (detailsForm.ShowDialog() == DialogResult.OK)
             {
                 var newEmployee = await apiService.CreateEmployeeAsync(employee);

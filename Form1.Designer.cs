@@ -33,8 +33,6 @@ namespace EmployeeDetails
         {
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewEmployees = new System.Windows.Forms.DataGridView();
-            this.EmpId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmpName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmpId = new System.Windows.Forms.TextBox();
             this.btnFInd = new System.Windows.Forms.Button();
@@ -61,29 +59,12 @@ namespace EmployeeDetails
             // dataGridViewEmployees
             // 
             this.dataGridViewEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEmployees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.EmpId,
-            this.EmpName});
             this.dataGridViewEmployees.Location = new System.Drawing.Point(52, 37);
             this.dataGridViewEmployees.Name = "dataGridViewEmployees";
             this.dataGridViewEmployees.RowHeadersWidth = 51;
             this.dataGridViewEmployees.RowTemplate.Height = 29;
             this.dataGridViewEmployees.Size = new System.Drawing.Size(723, 188);
             this.dataGridViewEmployees.TabIndex = 1;
-            // 
-            // EmpId
-            // 
-            this.EmpId.HeaderText = "Emp ID";
-            this.EmpId.MinimumWidth = 6;
-            this.EmpId.Name = "EmpId";
-            this.EmpId.Width = 125;
-            // 
-            // EmpName
-            // 
-            this.EmpName.HeaderText = "Name";
-            this.EmpName.MinimumWidth = 6;
-            this.EmpName.Name = "EmpName";
-            this.EmpName.Width = 125;
             // 
             // label1
             // 
@@ -189,7 +170,7 @@ namespace EmployeeDetails
             this.Controls.Add(this.dataGridViewEmployees);
             this.Controls.Add(this.button1);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Employee Details";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployees)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -202,8 +183,6 @@ namespace EmployeeDetails
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridViewEmployees;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmpId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmpName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEmpId;
         private System.Windows.Forms.Button btnFInd;
