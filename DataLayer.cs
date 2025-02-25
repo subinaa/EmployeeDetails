@@ -34,6 +34,23 @@ namespace EmployeeDetails
             response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsAsync<Employee>();
         }
+        // New method to get employee details by ID
+        public async Task<Employee> GetEmployeeByIdAsync(int empId)
+        {
+            var response = await httpClient.GetAsync($"{baseUrl}users/{empId}");
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadAsAsync<Employee>();
+        }
+        // New method to update the email of an employee
+        public async Task<Employee> UpdateEmailAsync(int empId, string newEmail)
+        {
+            var updateData = new { email = newEmail };
+            var content = JsonSerializer.Serialize(updateData);
+            var response = await httpClient.PatchAsync($"{baseUrl}users/{empId}", new StringContent(content, System.Text.Encoding.UTF8, "application/json"));
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadAsAsync<Employee>();
+
+        }
     }
 }
 
